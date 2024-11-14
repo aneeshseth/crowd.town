@@ -13,9 +13,20 @@ export type objectState = {
   objectURI: string;
 };
 
+export type Space = {
+  name: AvailableSpaces;
+  objects: objectState[];
+  uri: string;
+};
+
 export enum Objects {
-  workTable,
-  toilet,
-  singleTable,
-  plant,
+  workTable = "workTable",
+  toilet = "toilet",
+  singleTable = "singleTable",
+  plant = "plant",
+}
+
+export enum AvailableSpaces {
+  Orion = "Orion",
+  Cosima = "Cosima",
 }

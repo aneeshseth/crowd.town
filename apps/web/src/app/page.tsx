@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div className="">
       <Header />
-      <div className="bg-gradient-to-r from-pink-100 to-blue-300 w-screen h-screen flex lg:flex-row flex-col gap-10 p-8 ">
+      <div className="w-full h-full flex lg:flex-row flex-col gap-10 p-8">
         <div className="flex flex-col">
           <h1 className="text-5xl tracking-tight lg:text-5xl lg:mt-16 mt-6">
             Remote work amplified
