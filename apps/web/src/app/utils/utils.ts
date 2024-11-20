@@ -1,3 +1,4 @@
+import { v4 as uuidv4 } from "uuid";
 import {
   AvailableSpaces,
   Objects,
@@ -5,6 +6,7 @@ import {
   Space,
   userState,
 } from "../types/state";
+import randomString from "randomstring";
 
 export const DefaultOrionMap: objectState[] = [
   {
@@ -26,14 +28,6 @@ export const DefaultOrionMap: objectState[] = [
       "https://static.wixstatic.com/media/6782ac_2b661c3825e544d9a81ed0dfbd7e1f5a~mv2.png/v1/fill/w_560,h_344,al_c,lg_1,q_85,enc_auto/png-transparent-effective-meetings-group-discussion-office-illustrator-businessperson-remo.png",
     imgHeight: "150px",
     imgWidth: "500px",
-  },
-  {
-    type: Objects.toilet,
-    gridCol: 2,
-    gridRow: 3,
-    isActive: false,
-    objectURI:
-      "https://png.pngtree.com/png-clipart/20230913/original/pngtree-street-light-vector-png-image_11078627.png",
   },
   {
     type: Objects.plant,
@@ -75,14 +69,6 @@ export const DefaultCosimaMap: objectState[] = [
     imgWidth: "500px",
   },
   {
-    type: Objects.toilet,
-    gridCol: 2,
-    gridRow: 3,
-    isActive: false,
-    objectURI:
-      "https://png.pngtree.com/png-clipart/20230913/original/pngtree-street-light-vector-png-image_11078627.png",
-  },
-  {
     type: Objects.plant,
     gridCol: 0,
     gridRow: 3,
@@ -110,5 +96,36 @@ export const Spaces: Space[] = [
     name: AvailableSpaces.Cosima,
     objects: DefaultCosimaMap,
     uri: "https://png.pngtree.com/background/20230410/original/pngtree-map-blue-cartoon-illustration-background-picture-image_2384833.jpg",
+  },
+];
+
+export const Users: userState[] = [
+  {
+    name: randomString.generate(),
+    gridRow: 1,
+    gridCol: 1,
+    avatarURI:
+      "https://avatarsdk.com/wp-content/uploads/2023/06/MetaPerson-avatar.png",
+  },
+  {
+    name: randomString.generate(),
+    gridRow: 1,
+    gridCol: 2,
+    avatarURI:
+      "https://cdn4.iconfinder.com/data/icons/professions-2-5/66/102-512.png",
+  },
+  {
+    name: randomString.generate(),
+    gridRow: 1,
+    gridCol: 2,
+    avatarURI:
+      "https://static.vecteezy.com/system/resources/previews/034/415/189/non_2x/full-body-view-of-a-30-years-old-young-handsome-business-man-with-an-upset-expression-on-his-face-ai-generated-png.png",
+  },
+  {
+    name: randomString.generate(),
+    gridRow: 2,
+    gridCol: 3,
+    avatarURI:
+      "https://cdn3.iconfinder.com/data/icons/people-2-9/50/104-512.png",
   },
 ];
